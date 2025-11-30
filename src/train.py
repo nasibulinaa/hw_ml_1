@@ -16,7 +16,7 @@ df_test = pd.read_csv("data/processed/data_test.csv")
 X_test = df_test.drop(['target'], axis=1)
 y_test = df_test["target"]
 
-model = RandomForestClassifier(random_state=params["random_state"], n_estimators=params["n_estimators"])
+model = RandomForestClassifier(random_state=params["random_state"], n_estimators=params["n_estimators"], max_depth=params["max_depth"])
 model.fit(X_train, y_train)
 with open("model.pkl", 'wb') as f:
     pickle.dump(model, f)
@@ -32,6 +32,7 @@ mlflow.set_experiment("dvc_pipeline_experiment")
 with mlflow.start_run():
     mlflow.log_param("model", "RandomForestClassifier")
     mlflow.log_param("n_estimators", params["n_estimators"])
+    mlflow.log_param("max_depth", params["max_depth"])
     mlflow.log_metric("mse", mse)
     mlflow.log_metric("accuracy", accuracy)
     #mlflow.sklearn.log_model(model, "model")

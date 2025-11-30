@@ -1,4 +1,6 @@
+# HW_ML_1
 
+Установка зависимостей: `pip3 install dvc mlflow numpy pandas scikit-learn PyYAML`
 
 Структура:
 ```
