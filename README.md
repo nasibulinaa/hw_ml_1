@@ -13,6 +13,8 @@ dvc repro
 
 Основные зависимости: `dvc mlflow numpy pandas scikit-learn PyYAML`.
 
+Генерация данных (при отсутствии storage): `python3 src/gen_data.py`
+
 Структура:
 ```
 ├── data/ # Сырые и обработанные данные (только через DVC)
