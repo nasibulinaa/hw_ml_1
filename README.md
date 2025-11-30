@@ -1,6 +1,17 @@
 # HW_ML_1
 
-Установка зависимостей: `pip3 install dvc mlflow numpy pandas scikit-learn PyYAML`
+Воспроизведение:
+```bash
+git clone https://github.com/nasibulinaa/hw_ml_1.git
+cd hw_ml_1
+pip install -r requirements.txt
+dvc pull
+dvc repro
+```
+
+Запуск web-интерфейса MLFlow: `mlflow ui --backend-store-uri sqlite:///mlflow.db`.
+
+Основные зависимости: `dvc mlflow numpy pandas scikit-learn PyYAML`.
 
 Структура:
 ```
