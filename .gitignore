@@ -1,1 +1,4 @@
 /.venv
+/model.pkl
+/metrics.json
+/mlflow.db
